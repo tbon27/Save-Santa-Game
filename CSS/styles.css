@@ -1,0 +1,481 @@
+@import url(https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap);
+
+html {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../xmas.gif);
+  /* 
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(68%, #000000),
+    color-stop(75%, #ff0000),
+    color-stop(81%, #cccccc),
+    color-stop(81%, #cccccc),
+    color-stop(91%, #111111),
+    color-stop(95%, #000000),
+    color-stop(95%, #000000)
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #000000 68%,
+    #ff0000 75%,
+    #cccccc 81%,
+    #cccccc 81%,
+    #111111 91%,
+    #000000 95%,
+    #000000 95%
+  );
+  background: -webkit-linear-gradient(
+    315deg,
+    #000000 68%,
+    #ff0000 75%,
+    #cccccc 81%,
+    #cccccc 81%,
+    #111111 91%,
+    #000000 95%,
+    #000000 95%
+  );
+  background: linear-gradient(
+    135deg,
+    #000000 68%,
+    #ff0000 75%,
+    #cccccc 81%,
+    #cccccc 81%,
+    #111111 91%,
+    #000000 95%,
+    #000000 95%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.audioContainer {
+  width: 100%;
+  display: block;
+  position: fixed;
+  padding-top: 0;
+  padding-left: 75vw;
+  z-index: 10;
+}
+body {
+  width: 100%;
+  height: 100%;
+  /* background: -webkit-repeating-linear-gradient(
+    103deg,
+    #ff0000,
+    rgba(255, 0, 0, 0.7) 1px,
+    #ff0000 2px,
+    transparent 6px,
+    transparent 150px
+  );
+  background: repeating-linear-gradient(
+    -13deg,
+    #ff0000,
+    rgba(255, 255, 255, 0.7) 1px,
+    #ff0000 2px,
+    transparent 6px,
+    transparent 150px
+  ); */
+  margin: 0;
+}
+/*play area*/
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  cursor: grab;
+}
+.grid {
+  width: 100%;
+  height: 100%;
+
+  /* background: -webkit-repeating-linear-gradient(
+    45deg,
+    #ff0000,
+    rgba(255, 0, 0, 0.7) 1px,
+    #ff0000 2px,
+    transparent 6px,
+    transparent 150px
+  );
+  background: repeating-linear-gradient(
+    45deg,
+    #ff0000,
+    rgba(255, 255, 255, 0.7) 1px,
+    #ff0000 2px,
+    transparent 6px,
+    transparent 150px
+  ); */
+}
+
+.santaContainer {
+  display: inline-flex;
+  position: sticky;
+  height: 100%;
+  width: 100%;
+  margin-top: 60vh;
+  bottom: 0%;
+}
+#santaQuote {
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  font-style: bold;
+  font-variant: small-caps;
+  margin-top: -29px;
+  margin-left: 45px;
+  transform: rotate(5deg);
+  font-family: "Mountains of Christmas", cursive;
+}
+#SantaGIF {
+  z-index: 2;
+  position: relative;
+  margin-left: 27px;
+  display: block;
+  padding-top: 70px;
+  width: 170px;
+  height: 200px;
+}
+#cageIMG {
+  z-index: 3;
+  margin-top: 0;
+  margin-left: 0px;
+  width: 205px;
+  height: 218px;
+  display: inline-flex;
+  position: absolute;
+  padding-top: 67px;
+}
+#grinchIMG {
+  z-index: 3;
+  margin-top: 0;
+  margin-left: 30px;
+  width: 375px;
+  height: 218px;
+  position: absolute;
+  padding-top: 70px;
+  display: inline-flex;
+}
+#ornament {
+  z-index: 4;
+  margin-top: 0;
+  margin-left: -60px;
+  width: 375px;
+  height: 218px;
+  position: absolute;
+  padding-top: 234px;
+  display: inline-flex;
+}
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.container {
+  position: relative;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  padding-top: 10%;
+}
+
+/* counter-reset  */
+body {
+  counter-reset: presentCount 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+/*hide checkbox*/
+input {
+  position: fixed;
+  left: -100px;
+  top: -100px;
+}
+/* 
+*:focus:not(:focus-visible) {
+  outline: none;
+} */
+/*count presents collected*/
+.input-present:checked {
+  counter-increment: presentCount;
+}
+
+/*print to screen present collected total*/
+.sum:after {
+  content: counter(presentCount);
+}
+.sum {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+  height: auto;
+  letter-spacing: 3px;
+  font-size: 38px;
+  font-weight: 900;
+  font-family: Lato;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: rgba(196, 255, 196, 0.2);
+  font-family: "Mountains of Christmas", cursive;
+  left: 125px;
+}
+
+/*print to screen presents collected total*/
+.sum:after {
+  content: counter(presentCount);
+  font-family: "Lobster Two", cursive;
+  color: rgba(251, 255, 197, 1);
+}
+
+.input-present ~ .present {
+  opacity: 0;
+  -webkit-transition: 0.3s cubic-bezier(0, 0.25, 1, 0.4);
+  transition: 0.6s cubic-bezier(0, 0.25, 1, 0.4);
+  -webkit-animation: moveLeftRight 8s infinite alternate;
+  animation: moveLeftRight 8s infinite alternate;
+}
+
+.input-present1:not(:checked) ~ .present1,
+.input-present2:not(:checked) ~ .present2,
+.input-present3:not(:checked) ~ .present3,
+.input-present4:not(:checked) ~ .present4,
+.input-present5:not(:checked) ~ .present5,
+.input-present6:not(:checked) ~ .present6,
+.input-present7:not(:checked) ~ .present7,
+.input-present8:not(:checked) ~ .present8 {
+  opacity: 1;
+}
+.input-present1:checked ~ .present1 span,
+.input-present2:checked ~ .present2 span,
+.input-present3:checked ~ .present3 span,
+.input-present4:checked ~ .present4 span,
+.input-present5:checked ~ .present5 span,
+.input-present6:checked ~ .present6 span,
+.input-present7:checked ~ .present7 span,
+.input-present8:checked ~ .present8 span {
+  display: block;
+  z-index: -10;
+  pointer-events: none;
+}
+
+/*-------------
+Flying presents 
+---------------*/
+.present {
+  position: absolute;
+  left: 0;
+  cursor: grab;
+  background-image: url(../xmas-present-3.png);
+  width: 139px;
+  height: 127px;
+  z-index: 2;
+}
+
+.present > span {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: rgba(255, 252, 252, 0.5);
+  font-weight: 900;
+  width: 100px;
+  height: 100px;
+}
+.present > span:before {
+  z-index: 3;
+  content: "\26C4";
+  font-size: 200px;
+  color: white;
+  margin-left: -30px;
+}
+
+.present1 {
+  top: 0%;
+  -webkit-animation-delay: -7s !important;
+  animation-delay: -7s !important;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.present2 {
+  top: 0%;
+  -webkit-animation-delay: -4s !important;
+  animation-delay: -4s !important;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.present3 {
+  top: 0%;
+  -webkit-animation-delay: -3s !important;
+  animation-delay: -3s !important;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.present4 {
+  top: 0%;
+  -webkit-animation-delay: -8s !important;
+  animation-delay: -8s !important;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.present5 {
+  top: 0%;
+  -webkit-animation-delay: -16s !important;
+  animation-delay: -16s !important;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.present6 {
+  top: 0%;
+  -webkit-animation-delay: -9s !important;
+  animation-delay: -9s !important;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.present7 {
+  top: 0%;
+  -webkit-animation-delay: -6s !important;
+  animation-delay: -6s !important;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.present8 {
+  top: 0%;
+  -webkit-animation-delay: -12s !important;
+  animation-delay: -12s !important;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.present9 {
+  top: 0%;
+  -webkit-animation-delay: -12s !important;
+  animation-delay: -12s !important;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+/* @-webkit-keyframes move {
+} */
+@keyframes moveLeftRight {
+  0% {
+    top: 60%;
+    left: 0%;
+  }
+  20% {
+    top: 50%;
+    left: 40%;
+  }
+  40% {
+    top: 10%;
+    left: 30%;
+  }
+  60% {
+    top: 40%;
+    left: 70%;
+  }
+  80% {
+    top: 70%;
+    left: 65%;
+  }
+  100% {
+    top: 10%;
+    left: 90%;
+  }
+}
+@keyframes moveUpDown {
+  0% {
+    top: 0%;
+    left: 2%;
+  }
+  20% {
+    top: 20%;
+    left: 6%;
+  }
+  40% {
+    top: 100%;
+    left: 2%;
+  }
+  60% {
+    top: 40%;
+    left: 6%;
+  }
+  80% {
+    top: 10%;
+    left: 3%;
+  }
+  100% {
+    top: 0%;
+    left: 5%;
+  }
+}
+/* Page Stying  */
+h1 {
+  z-index: 1;
+  font-size: 125px;
+  color: #ff0000;
+  letter-spacing: 10px;
+  text-shadow: 5px 3px 0px #000;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(-13deg);
+  -ms-transform: rotate(-13deg);
+  transform: rotate(-5deg);
+  text-align: center;
+  width: 100%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: "Yuji Mai", serif;
+}
+
+h2 {
+  z-index: 2;
+  font-size: 120px;
+  color: white;
+  padding-left: 0;
+  padding-top: 0px;
+  font-family: cursive;
+  letter-spacing: 10px;
+  text-shadow: 5px 3px 0px #000;
+  margin: auto;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: "Yuji Mai", serif;
+}
