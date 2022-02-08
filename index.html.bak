@@ -24,9 +24,9 @@
                 <div class="santaContainer">
                     <p id="santaQuote">HO HO HO! Help me <br>collect my presents!</p>
                     <img id="SantaGIF" src="images/santa.gif" alt="" >
-                    <img id="cageIMG" src="images/cage-img2.png" alt="">
-                    <img id="grinchIMG" src="images/grinch.gif" alt="">
-                    <img id="ornament" src="images/xmas-ornament.png" alt="">
+                    <img id="cageIMG" src=".images/cage-img2.png" alt="">
+                    <img id="grinchIMG" src=".images/grinch.gif" alt="">
+                    <img id="ornament" src=".images/xmas-ornament.png" alt="">
                 </div>
             </div>
                 

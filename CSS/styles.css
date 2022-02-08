@@ -7,7 +7,7 @@ html {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../xmas.gif);
+  background-image: url(../images/xmas.gif);
   /* 
   background: -webkit-gradient(
     linear,
@@ -283,7 +283,7 @@ Flying presents
   position: absolute;
   left: 0;
   cursor: grab;
-  background-image: url(../xmas-present-3.png);
+  background-image: url(../images/xmas-present-3.png);
   width: 139px;
   height: 127px;
   z-index: 2;
